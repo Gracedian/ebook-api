@@ -1,0 +1,56 @@
+[
+    {
+        "quizId" : 1,
+        "title" : "Seni Lukis",
+        "count" : 5,
+        "question" : [
+            {   
+                "questionId" : 1,
+                "title" : "Seni lukis merupakan salah satu cabang seni rupa. Merupakan pengertian dari ",
+                "0" : "Wikipedia",
+                "1" : "Soedarso SP",
+                "2"  : "Herbert Read",
+                "3" : "Soni Ade",
+                "answer" : "Wikipedia"
+            },
+            {
+                "questionId" : 2,
+                "title" : "Karya lukis ialah sebuah karya manusia yang mengkomunikasikan pengalaman batiniahnya. Merupakan pengertian dari ",
+                "0" : "Wikipedia",
+                "1" : "Soedarso SP",
+                "2"  : "Herbert Read",
+                "3" : "Soni Ade",
+                "answer" : "Soedarso SP"
+            },
+            {
+                "questionId" : 3,
+                "title" : "Karya seni lukis merupakan kegiatan rohani yang direfleksikan pada jasmani dan mempunyai daya yang bisa membangkitkan jiwa. Merupakan pengertian dari ",
+                "0" : "Wikipedia",
+                "1" : "Soedarso SP",
+                "2"  : "Herbert Read",
+                "3" : "Soni Ade",
+                "answer" : "Hebert Read"
+            },
+            {
+                "questionId" : 4,
+                "title" : "Seni Lukis menurut Jim Supangat",
+                "0" : "suatu upaya menegaskan kembali pengalaman di masa lalu dalam konteks sekarang",
+                "1" : "sebuah karya manusia yang mengkomunikasikan pengalaman batiniahnya",
+                "2"  : "sesuatu yang selain baik tapi juga menyenangkan",
+                "3" : "kekuatan peradaban manusia, kekuatan budaya, sebab dalam melakukan kegiatan ini, seseorang dilatih jeli, cermat, serta teliti saat mengamati berbagai kejadian alam serta kehidupan.",
+                "answer" : "suatu upaya menegaskan kembali pengalaman di masa lalu dalam konteks sekarang"
+            },
+            {
+                "questionId" : 5,
+                "title" : "Seni Lukis Menurut Aristoteles",
+                "0" : "suatu upaya menegaskan kembali pengalaman di masa lalu dalam konteks sekarang",
+                "1" : "sebuah karya manusia yang mengkomunikasikan pengalaman batiniahnya.",
+                "2"  : "sesuatu yang selain baik tapi juga menyenangkan",
+                "3" : "kekuatan peradaban manusia, kekuatan budaya, sebab dalam melakukan kegiatan ini, seseorang dilatih jeli, cermat, serta teliti saat mengamati berbagai kejadian alam serta kehidupan.",
+                "answer" : "sesuatu yang selain baik tapi juga menyenangkan"
+            }
+        ],
+        "tag" : "quiz",
+        "isHome" : true
+    }
+]
