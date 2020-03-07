@@ -19,7 +19,7 @@ app.use(jwt());
 app.get('/', function (req, res) {
     res.json({
         status: 200,
-        message: 'API dah jalan created with lope frome me :D'
+        message: 'API dah jalan created with love <3'
     });
 });
 app.use('/api/users', require('./modules/users/users.controller'));
