@@ -54,7 +54,7 @@ async function getById(req, res) {
     let query = await Quiz.findById(model._id);
     let result = res.json(
         {
-            "message" : "Success Get Haji by Id" , 
+            "message" : "Success Get by Id" , 
             "code" : 200, 
             "data" : query 
         }
@@ -68,7 +68,7 @@ async function _delete(req, res) {
         let query = await Quiz.remove();
         let result = res.json(
             {
-                "message" : "Success Remove Haji" , 
+                "message" : "Success Remove " , 
                 "code" : 200, 
                 "data" : query
             }
@@ -78,7 +78,7 @@ async function _delete(req, res) {
         let query = await ResultQuiz.remove();
         let result = res.json(
             {
-                "message" : "Success Remove Umrah" , 
+                "message" : "Success Remove " , 
                 "code" : 200, 
                 "data" : query
             }
