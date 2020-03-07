@@ -1,4 +1,4 @@
 {
-    "connectionString": "mongo.exe mongodb://localhost:27017/ebook-api?authSource=admin --username grace",
+    "connectionString": "mongodb://grace:12345@0.0.0.0:27017/ebook-api",
     "secret": "LOKIJUHYAQSWDE"
 }
