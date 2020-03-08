@@ -2,24 +2,24 @@ const express = require('express');
 const router = express.Router();
 const db = require('../../helpers/db');
 const jwt = require('jsonwebtoken');
-const Quiz = db.Quiz;
-const ResultQuiz = db.ResultQuiz;
+const Latian = db.Latian;
+const ResultLatian = db.ResultLatian;
 const User = db.User;
 // routes
 
-router.post('/post/quizall', create);
-router.get('/all', getAll);
-router.get('/', getById);
+router.post('/post/latianall', create);
+router.get('/alllatian', getAll);
+router.get('/latian', getById);
 router.delete('/delete', _delete);
-router.post('/post/quiz', checkAnswer);
-router.get('/result', getResultQuiz);
+router.post('/post/latian', checkAnswer);
+router.get('/resultlat', getResultLat);
 
 module.exports = router;
 
 async function create(req,res) {
-    let soal = require('../../data/soal.json');
+    let soal = require('../../data/latian.json');
 
-    let query = await Quiz.insertMany(soal);
+    let query = await Latian.insertMany(soal);
    
     let result = res.json(
         {
@@ -32,7 +32,7 @@ async function create(req,res) {
 }
 
 async function getAll(req, res) {
-    let query = await Quiz.find();
+    let query = await Latian.find();
     let result = res.json(
         {
             "message" : "Success Get All Soal" , 
@@ -49,7 +49,7 @@ async function getById(req, res) {
         _id : req.query.id
     }
 
-    let query = await Quiz.findById(model._id);
+    let query = await Latian.findById(model._id);
     let result = res.json(
         {
             "message" : "Success Get by Id" , 
@@ -62,8 +62,8 @@ async function getById(req, res) {
 }
 
 async function _delete(req, res) {
-    if(req.query.data === "quiz") {
-        let query = await Quiz.remove();
+    if(req.query.data === "latian") {
+        let query = await Latian.remove();
         let result = res.json(
             {
                 "message" : "Success Remove " , 
@@ -73,7 +73,7 @@ async function _delete(req, res) {
         )
         return result
     } else if(req.query.data === "result") {
-        let query = await ResultQuiz.remove();
+        let query = await ResultLatian.remove();
         let result = res.json(
             {
                 "message" : "Success Remove " , 
@@ -91,11 +91,11 @@ async function checkAnswer(req,res) {
         _id : req.query.id,
     }
 
-    let getQuiz = await Quiz.findById(model._id);
+    let getLatian = await Latian.findById(model._id);
     let payloadAnswer = req.body;
     let answer = [];
 
-    getQuiz.question.map( obj => {
+    getLatian.question.map( obj => {
         answer.push(obj.answer);
     })
 
@@ -145,11 +145,11 @@ async function checkAnswer(req,res) {
         "timestamp" : formatDate(new Date())
     }
 
-    await ResultQuiz.insertMany(resultAnswer)
+    await ResultLatian.insertMany(resultAnswer)
 
     let result = res.json(
         {
-            "message" : "Success Cleared Quiz" ,
+            "message" : "Success Cleared Latihan" ,
             "code" : 204, 
             "data" : resultAnswer
         }
@@ -158,8 +158,8 @@ async function checkAnswer(req,res) {
     return result
 }
 
-async function getResultQuiz(req, res, next) {
-    let query = await ResultQuiz.find();
+async function getResultLat(req, res, next) {
+    let query = await ResultLatian.find();
     let result = res.json(
         {
             "message" : "Success Get All Soal" , 

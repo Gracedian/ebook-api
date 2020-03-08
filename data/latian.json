@@ -1,8 +1,7 @@
 [
     {
-        "quizId" : 1,
+        "latianId" : 1,
         "title" : "Seni Lukis",
-        "time" : 30,
         "count" : 5,
         "question" : [
             {   
@@ -51,7 +50,7 @@
                 "answer" : "sesuatu yang selain baik tapi juga menyenangkan"
             }
         ],
-        "tag" : "quiz",
+        "tag" : "latian",
         "isHome" : true
     }
 ]
